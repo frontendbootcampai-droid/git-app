@@ -312,3 +312,63 @@ body {
 .faq-item.active .faq-toggle {
     transform: rotate(45deg);
 }
+
+.promo-section {
+    background-color: #f8f8f8;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.promo-title {
+    font-size: 2.5rem;
+    color: #131921;
+    margin-bottom: 1.5rem;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.timer-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    min-width: 80px;
+}
+
+.timer-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #131921;
+}
+
+.timer-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.claim-offer-button {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.claim-offer-button:hover {
+    background-color: #e68a00;
+}
