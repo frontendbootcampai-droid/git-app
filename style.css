@@ -239,6 +239,12 @@ body {
     height: 50px;
 }
 
+.feature-icon i {
+    font-size: 3rem;
+    width: 50px;
+    text-align: center;
+}
+
 .feature-text h3 {
     font-size: 1.25rem;
     color: #131921;
