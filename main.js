@@ -15,8 +15,8 @@ faqItems.forEach(item => {
 });
 
 // Countdown Timer
+const countDate = new Date(new Date().getTime() + (7 * 24 * 60 * 60 * 1000)).getTime();
 const countdown = () => {
-    const countDate = new Date(new Date().getTime() + (7 * 24 * 60 * 60 * 1000)).getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
 
