@@ -37,3 +37,18 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+
+// Newsletter Subscription
+const newsletterForm = document.querySelector('.newsletter-form');
+const newsletterInput = document.querySelector('.newsletter-input');
+
+newsletterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = newsletterInput.value;
+    if (email) {
+        alert(`Thank you for subscribing with ${email}!`);
+        newsletterInput.value = '';
+    } else {
+        alert('Please enter a valid email address.');
+    }
+});
