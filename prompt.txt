@@ -1,0 +1,16 @@
+1.Create a responsive amazing and creativity navbar inspired by Amazon's product pages using just HTML, CSS, and JavaScript. Include a logo on the left, a search bar in the center, and navigation links (Today's Deals, Customer Service, Gift Cards, Sell, Cart) on the right. Use a clean layout with subtle shadows, hover effects, and a mobile hamburger menu.Unleash your creativity.
+------------------
+2.Design a hero section similar to Amazon’s product spotlight. Include a product image on the left and a product title, short description, star rating, and "Buy Now" button on the right. Use HTML, CSS, and JavaScript. Make it responsive and conversion-focused with a clean white background and subtle borders.
+---------------------
+3.Build a product features section styled like Amazon. Use a two-column layout: left side for product images or icons, right side for bullet-point features. Include a title ("Product Highlights") and 5 key features. Use HTML and CSS with a clean grid layout and consistent spacing.
+----------------------
+4.Create an FAQ section styled like Amazon’s Q&A. Include a title ("Customer Questions & Answers") and 5 collapsible items. Each question should be bold, and answers should appear below with smooth transitions. Use HTML, CSS, and JavaScript. Keep the design clean and readable.
+-------------------------
+5.Design a promotional section inspired by Amazon’s deal banners. Include a bold headline ("Limited-Time Deal: Save 30%"), a countdown timer, and a "Claim Offer" button. Use HTML, CSS, and JavaScript. Style it with Amazon’s orange CTA color and clean layout.
+-------------------
+6. Build a newsletter signup section similar to Amazon’s email opt-in. Include a title ("Get Exclusive Deals"), a short description, an email input field, and a subscribe button. Use HTML, CSS, and JavaScript. Keep the design minimal with a white background and centered layout.
+---------------------
+7.Create a footer inspired by Amazon’s layout. Include multiple columns with links (Get to Know Us, Make Money with Us, Let Us Help You), social media icons, and copyright text. Use HTML and CSS with a dark background and light text. Make it responsive and structured.
+
+-----
+8.create a Related Products section similar to Amazon’s recommendation layout. Include a title ("Related Products"), a short description, and a responsive grid of 3–4 product cards. Each card should display a product image, name, price, and a "View Details" button. 
