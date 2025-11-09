@@ -1,44 +1,78 @@
+
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #131921;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #131921 0%, #232f3e 100%);
     color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .logo a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 .search-bar {
     display: flex;
     flex-grow: 1;
-    margin: 0 1rem;
+    margin: 0 2rem;
+    max-width: 600px;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px 0 0 5px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #febd69;
+    box-shadow: 0 0 5px rgba(254, 189, 105, 0.5);
 }
 
 .search-bar button {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     background-color: #febd69;
     color: #131921;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 25px 25px 0;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #f3a847;
 }
 
 .nav-links {
@@ -49,17 +83,84 @@ body {
 }
 
 .nav-links li {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
     transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #febd69;
+    transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #febd69;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.user-profile {
+    position: relative;
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(254, 189, 105, 0.7);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #232f3e;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #febd69;
+    color: #131921;
+}
+
+.user-profile:hover .dropdown-content {
+    display: block;
 }
 
 .hamburger {
@@ -73,16 +174,39 @@ body {
     height: 3px;
     margin: 5px 0;
     background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .search-bar {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
     .nav {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         width: 100%;
-        background-color: #131921;
+        background-color: #232f3e;
+        animation: slideDown 0.3s ease-out;
     }
 
     .nav.active {
@@ -96,11 +220,34 @@ body {
     }
 
     .nav-links li {
-        margin: 0.5rem 0;
+        margin: 1rem 0;
     }
 
     .hamburger {
         display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

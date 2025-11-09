@@ -3,6 +3,7 @@ const nav = document.querySelector('.nav');
 
 hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
 });
 
 const faqItems = document.querySelectorAll('.faq-item');
